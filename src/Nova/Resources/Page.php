@@ -108,7 +108,7 @@ class Page extends TemplateResource
                 ->showOnPreview(),
 
             // Page data panel
-            Panel::make(__('novaPageManager.pageFieldsPanelName'), [
+            Panel::make(__('novaPageManager.sidebarTitle'), [
                 PageManagerField::make(\Outl1ne\PageManager\Template::TYPE_PAGE)
                     ->withTemplate($this->template)
                     ->withSeoFields(NPM::getSeoFields())

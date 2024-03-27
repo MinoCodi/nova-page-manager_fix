@@ -2,13 +2,16 @@
 
 namespace Outl1ne\PageManager\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Outl1ne\PageManager\NPM;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+
 
 class Page extends Model
 {
+    use HasFactory;
     use HasTranslations;
 
     protected $fillable = ['parent_id'];
@@ -86,4 +89,8 @@ class Page extends Model
 
         return $path;
     }
+
+
+
+
 }

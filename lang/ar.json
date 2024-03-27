@@ -1,0 +1,17 @@
+{
+  "novaPageManager.sidebarTitle": "مدير الصفحات",
+  "novaPageManager.pageResourceLabel": "الصفحات",
+  "novaPageManager.pageResourceSingularLabel": "صفحة",
+  "novaPageManager.regionResourceLabel": "المناطق",
+  "novaPageManager.regionResourceSingularLabel": "منطقة",
+  "novaPageManager.templateField": "القالب",
+  "novaPageManager.nameField": "الاسم",
+  "novaPageManager.slugField": "الرابط",
+  "novaPageManager.defaultPanelName": "بيانات الصفحة",
+  "novaPageManager.seoPanelName": "بيانات SEO",
+  "novaPageManager.customizeSlug": "تخصيص",
+  "novaPageManager.pageLinkViewButton": "عرض",
+  "novaPageManager.seoTitle": "عنوان SEO",
+  "novaPageManager.seoDescription": "وصف SEO",
+  "novaPageManager.seoImage": "صورة SEO"
+}

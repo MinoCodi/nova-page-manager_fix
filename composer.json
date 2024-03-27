@@ -12,11 +12,6 @@
       "name": "Tarvo Reinpalu",
       "email": "tarvoreinpalu@gmail.com",
       "role": "Developer"
-    },
-    {
-      "name": "Outl1ne",
-      "email": "info@outl1ne.com",
-      "role": "Maintainer"
     }
   ],
   "license": "MIT",
