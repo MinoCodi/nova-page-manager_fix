@@ -14,8 +14,8 @@ class Page extends Model
     use HasFactory;
     use HasTranslations;
 
-    protected $fillable = ['parent_id'];
-    protected $translatable = ['name', 'slug'];
+    protected $fillable = ['parent_id','name','content'];
+    protected $translatable = ['name', 'slug','content'];
     protected $casts = [
         'data' => 'array',
         'seo' => 'array',

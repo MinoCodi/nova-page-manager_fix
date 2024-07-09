@@ -2,8 +2,13 @@
 
 namespace Outl1ne\PageManager\Nova\Resources;
 
+use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
+use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
+use Laravel\Nova\Fields\Slug;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Panel;
 use Illuminate\Http\Request;
+use Mostafaznv\NovaCkEditor\CkEditor;
 use Outl1ne\PageManager\NPM;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
@@ -18,10 +23,13 @@ use Outl1ne\PageManager\Nova\Filters\TemplatesIncludeFilter;
 
 class Page extends TemplateResource
 {
+
+    use TranslatableTabToRowTrait;
+
     public static $title = 'name';
     public static $model = null;
     public static $displayInNavigation = false;
-    public static $search = ['name', 'slug', 'template'];
+    public static $search = ['name', 'slug', 'content', 'template'];
 
     protected $type = 'page';
 
@@ -107,8 +115,14 @@ class Page extends TemplateResource
                 ->nullable()
                 ->showOnPreview(),
 
+            NovaTabTranslatable::make([
+                CkEditor::make('Content','content')
+                    ->translatable(NPM::getLocales())->hideFromIndex(),
+            ]),
             // Page data panel
             Panel::make(__('novaPageManager.sidebarTitle'), [
+
+
                 PageManagerField::make(\Outl1ne\PageManager\Template::TYPE_PAGE)
                     ->withTemplate($this->template)
                     ->withSeoFields(NPM::getSeoFields())
